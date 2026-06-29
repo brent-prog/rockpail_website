@@ -106,18 +106,27 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="brand-card mx-auto flex w-full max-w-lg flex-col items-center rounded-[2rem] p-8 text-center sm:p-10">
-            <img
-              src="/Purple_Logo.png"
-              alt="RockPail logo"
-              className="w-full max-w-sm"
-            />
-            <div className="mt-8 rounded-full bg-[var(--pail-purple)] px-7 py-3 text-sm font-black uppercase tracking-[0.18em] text-[var(--rockpail-yellow)]">
-              DING.
+          <div className="brand-card mx-auto w-full max-w-lg overflow-hidden rounded-[2rem] p-3 text-center sm:p-4">
+            <div className="relative overflow-hidden rounded-[1.5rem] bg-white">
+              <img
+                src="/Beach%20kids.png"
+                alt="RockPail being played outside on the beach"
+                className="aspect-[4/3] w-full object-cover"
+              />
+              <div className="absolute left-4 top-4 rounded-full bg-[var(--rockpail-yellow)] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[var(--pail-purple)] shadow-lg">
+                Beach ready
+              </div>
             </div>
-            <p className="mt-5 max-w-sm text-base font-semibold leading-7">
-              Fill the pails. Place them 7 paces apart. Throw the rocks. Call it loud.
-            </p>
+            <div className="px-5 pb-6 pt-6">
+              <img
+                src="/Purple_Logo.png"
+                alt="RockPail logo"
+                className="mx-auto w-full max-w-xs"
+              />
+              <p className="mt-5 max-w-sm text-base font-semibold leading-7">
+                Fill the pails. Place them 7 paces apart. Throw the rocks. Call it loud.
+              </p>
+            </div>
           </div>
         </div>
       </section>
