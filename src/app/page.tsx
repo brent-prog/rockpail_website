@@ -63,27 +63,27 @@ const faqs = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden">
-      <section className="hero-grid relative isolate bg-[var(--rockpail-yellow)]">
-        <div className="absolute inset-x-0 top-0 h-3 bg-[var(--pail-purple)]" />
-        <nav className="sticky top-0 z-50 border-b border-[var(--pail-purple)]/15 bg-[var(--rockpail-yellow)]">
-          <div className="container flex h-20 items-center justify-between text-[var(--pail-purple)] sm:h-24">
-            <a href="#top" className="block overflow-visible" aria-label="RockPail home">
-              <img
-                src="/Purple_Logo.png"
-                alt="RockPail"
-                className="w-28 max-w-none scale-[1.85] origin-left sm:w-36"
-              />
-            </a>
-            <div className="hidden items-center gap-7 text-sm font-black uppercase tracking-[0.18em] sm:flex">
-              <a href="#how">How to Play</a>
-              <a href="#rules">Rules</a>
-              <a href="#contact">Wholesale</a>
-            </div>
+    <main className="min-h-screen overflow-hidden pt-20 sm:pt-24">
+      <nav className="fixed inset-x-0 top-0 z-50 border-b border-[var(--pail-purple)]/15 bg-[var(--rockpail-yellow)] shadow-sm">
+        <div className="container flex h-20 items-center justify-between text-[var(--pail-purple)] sm:h-24">
+          <a href="#top" className="block" aria-label="RockPail home">
+            <img
+              src="/Purple_Logo.png"
+              alt="RockPail"
+              className="w-36 sm:w-44"
+            />
+          </a>
+          <div className="hidden items-center gap-7 text-sm font-black uppercase tracking-[0.18em] sm:flex">
+            <a href="#how">How to Play</a>
+            <a href="#rules">Rules</a>
+            <a href="#contact">Wholesale</a>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        <div id="top" className="container grid gap-10 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:pb-14 lg:pt-10">
+      <section id="top" className="hero-grid relative isolate bg-[var(--rockpail-yellow)]">
+        <div className="absolute inset-x-0 top-0 h-3 bg-[var(--pail-purple)]" />
+        <div className="container grid gap-10 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:pb-14 lg:pt-10">
           <div className="pt-0 lg:pt-3">
             <p className="section-kicker mb-4">No assembly required</p>
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.9] tracking-[-0.07em] text-[var(--pail-purple)] sm:text-7xl lg:text-8xl">
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" className="bg-white py-20">
+      <section id="how" className="bg-white py-20 scroll-mt-24">
         <div className="container">
           <div className="max-w-3xl">
             <p className="section-kicker mb-4">How to play</p>
@@ -199,7 +199,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="rules" className="bg-[var(--sand-white)] py-20">
+      <section id="rules" className="bg-[var(--sand-white)] py-20 scroll-mt-24">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="section-kicker mb-4">Rules preview</p>
@@ -241,7 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[var(--rock-black)] py-20 text-white">
+      <section id="contact" className="bg-[var(--rock-black)] py-20 text-white scroll-mt-24">
         <div className="container grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
             <img
