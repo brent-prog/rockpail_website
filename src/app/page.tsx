@@ -66,9 +66,13 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden">
       <section className="hero-grid relative isolate bg-[var(--rockpail-yellow)]">
         <div className="absolute inset-x-0 top-0 h-3 bg-[var(--pail-purple)]" />
-        <nav className="container flex items-center justify-between py-6 text-[var(--pail-purple)]">
-          <a href="#top" className="text-2xl font-black tracking-tight">
-            RockPail
+        <nav className="container flex items-center justify-between py-5 text-[var(--pail-purple)]">
+          <a href="#top" className="block" aria-label="RockPail home">
+            <img
+              src="/Purple_Logo.png"
+              alt="RockPail"
+              className="h-12 w-auto sm:h-14"
+            />
           </a>
           <div className="hidden items-center gap-6 text-sm font-black uppercase tracking-[0.16em] sm:flex">
             <a href="#how">How to Play</a>
@@ -77,7 +81,7 @@ export default function Home() {
           </div>
         </nav>
 
-        <div id="top" className="container grid gap-10 pb-20 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-28 lg:pt-16">
+        <div id="top" className="container grid gap-10 pb-20 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-28 lg:pt-14">
           <div>
             <p className="section-kicker mb-5">No assembly required</p>
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.9] tracking-[-0.07em] text-[var(--pail-purple)] sm:text-7xl lg:text-8xl">
@@ -103,11 +107,15 @@ export default function Home() {
           </div>
 
           <div className="brand-card mx-auto flex w-full max-w-lg flex-col items-center rounded-[2rem] p-8 text-center sm:p-10">
-            <div className="pail-illustration" aria-hidden="true" />
-            <p className="mt-8 text-4xl font-black uppercase tracking-[-0.05em] text-[var(--pail-purple)]">
+            <img
+              src="/Purple_Logo.png"
+              alt="RockPail logo"
+              className="w-full max-w-sm"
+            />
+            <div className="mt-8 rounded-full bg-[var(--pail-purple)] px-7 py-3 text-sm font-black uppercase tracking-[0.18em] text-[var(--rockpail-yellow)]">
               DING.
-            </p>
-            <p className="mt-2 max-w-sm text-base font-semibold leading-7">
+            </div>
+            <p className="mt-5 max-w-sm text-base font-semibold leading-7">
               Fill the pails. Place them 7 paces apart. Throw the rocks. Call it loud.
             </p>
           </div>
@@ -158,6 +166,11 @@ export default function Home() {
       <section className="bg-[var(--pail-purple)] py-20 text-white">
         <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
+            <img
+              src="/Yellow_logo.png"
+              alt="RockPail"
+              className="mb-8 h-auto w-52"
+            />
             <p className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-[var(--rockpail-yellow)]">
               Why it works
             </p>
@@ -220,6 +233,11 @@ export default function Home() {
       <section id="contact" className="bg-[var(--rock-black)] py-20 text-white">
         <div className="container grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
+            <img
+              src="/Yellow_logo.png"
+              alt="RockPail"
+              className="mb-8 h-auto w-48"
+            />
             <p className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-[var(--rockpail-yellow)]">
               Coming soon
             </p>
