@@ -57,19 +57,24 @@ a {
   background-size: 40px 40px;
 }
 
-/* The uploaded logo has extra transparent vertical space. This keeps it readable in the fixed header without clipping. */
+/* Header logo: the source file has transparent padding, so force a larger rendered width. */
 main > nav img[alt="RockPail"] {
-  width: 13rem !important;
+  width: 18rem !important;
   height: auto !important;
-  max-height: 5.5rem !important;
+  max-height: none !important;
   object-fit: contain !important;
 }
 
 @media (min-width: 640px) {
   main > nav img[alt="RockPail"] {
-    width: 17rem !important;
-    max-height: 6.5rem !important;
+    width: 25rem !important;
   }
+}
+
+/* Force the primary hero CTA to the brand colour combo. */
+main a[href="#how"] {
+  color: #f4ea00 !important;
+  background-color: #23005f !important;
 }
 
 .pail-illustration {
