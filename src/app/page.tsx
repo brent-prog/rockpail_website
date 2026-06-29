@@ -63,14 +63,14 @@ const faqs = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden pt-20 sm:pt-24">
+    <main className="min-h-screen overflow-hidden pt-24 sm:pt-28">
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-[var(--pail-purple)]/15 bg-[var(--rockpail-yellow)] shadow-sm">
-        <div className="container flex h-20 items-center justify-between text-[var(--pail-purple)] sm:h-24">
+        <div className="container flex h-24 items-center justify-between text-[var(--pail-purple)] sm:h-28">
           <a href="#top" className="block" aria-label="RockPail home">
             <img
               src="/Purple_Logo.png"
               alt="RockPail"
-              className="w-36 sm:w-44"
+              className="h-16 w-auto object-contain sm:h-20"
             />
           </a>
           <div className="hidden items-center gap-7 text-sm font-black uppercase tracking-[0.18em] sm:flex">
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" className="bg-white py-20 scroll-mt-24">
+      <section id="how" className="bg-white py-20 scroll-mt-28">
         <div className="container">
           <div className="max-w-3xl">
             <p className="section-kicker mb-4">How to play</p>
@@ -199,7 +199,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="rules" className="bg-[var(--sand-white)] py-20 scroll-mt-24">
+      <section id="rules" className="bg-[var(--sand-white)] py-20 scroll-mt-28">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="section-kicker mb-4">Rules preview</p>
@@ -241,7 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[var(--rock-black)] py-20 text-white scroll-mt-24">
+      <section id="contact" className="bg-[var(--rock-black)] py-20 text-white scroll-mt-28">
         <div className="container grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
             <img
@@ -269,7 +269,7 @@ export default function Home() {
             >
               bpattison1973@gmail.com
             </a>
-            <a href="tel:+15198352374" className="mt-3 block text-xl font-black">
+            <a href="tel:+15198352374" className="mt-3 text-xl font-black">
               519-835-2374
             </a>
           </div>
