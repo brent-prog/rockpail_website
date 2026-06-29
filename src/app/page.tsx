@@ -66,31 +66,33 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden">
       <section className="hero-grid relative isolate bg-[var(--rockpail-yellow)]">
         <div className="absolute inset-x-0 top-0 h-3 bg-[var(--pail-purple)]" />
-        <nav className="container flex items-center justify-between py-5 text-[var(--pail-purple)]">
-          <a href="#top" className="block" aria-label="RockPail home">
-            <img
-              src="/Purple_Logo.png"
-              alt="RockPail"
-              className="h-12 w-auto sm:h-14"
-            />
-          </a>
-          <div className="hidden items-center gap-6 text-sm font-black uppercase tracking-[0.16em] sm:flex">
-            <a href="#how">How to Play</a>
-            <a href="#rules">Rules</a>
-            <a href="#contact">Wholesale</a>
+        <nav className="sticky top-0 z-50 border-b border-[var(--pail-purple)]/10 bg-[var(--rockpail-yellow)]/95 backdrop-blur">
+          <div className="container flex items-center justify-between py-3 text-[var(--pail-purple)]">
+            <a href="#top" className="block" aria-label="RockPail home">
+              <img
+                src="/Purple_Logo.png"
+                alt="RockPail"
+                className="h-16 w-auto sm:h-20"
+              />
+            </a>
+            <div className="hidden items-center gap-7 text-sm font-black uppercase tracking-[0.18em] sm:flex">
+              <a href="#how">How to Play</a>
+              <a href="#rules">Rules</a>
+              <a href="#contact">Wholesale</a>
+            </div>
           </div>
         </nav>
 
-        <div id="top" className="container grid gap-10 pb-20 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-28 lg:pt-14">
+        <div id="top" className="container grid min-h-[calc(100vh-92px)] gap-10 pb-14 pt-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-16 lg:pt-8">
           <div>
-            <p className="section-kicker mb-5">No assembly required</p>
+            <p className="section-kicker mb-4">No assembly required</p>
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.9] tracking-[-0.07em] text-[var(--pail-purple)] sm:text-7xl lg:text-8xl">
               Keep Fun Simple
             </h1>
-            <p className="mt-7 max-w-2xl text-xl font-semibold leading-8 text-[var(--rock-black)] sm:text-2xl">
+            <p className="mt-6 max-w-2xl text-xl font-semibold leading-8 text-[var(--rock-black)] sm:text-2xl">
               The simple, portable outdoor throwing game built around rocks, metal pails, and the perfect DING.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#how"
                 className="rounded-full bg-[var(--pail-purple)] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white shadow-xl shadow-purple-950/20 transition hover:-translate-y-0.5"
@@ -117,13 +119,13 @@ export default function Home() {
                 Beach ready
               </div>
             </div>
-            <div className="px-5 pb-6 pt-6">
+            <div className="px-5 pb-5 pt-5">
               <img
                 src="/Purple_Logo.png"
                 alt="RockPail logo"
                 className="mx-auto w-full max-w-xs"
               />
-              <p className="mt-5 max-w-sm text-base font-semibold leading-7">
+              <p className="mt-4 max-w-sm text-base font-semibold leading-7">
                 Fill the pails. Place them 7 paces apart. Throw the rocks. Call it loud.
               </p>
             </div>
