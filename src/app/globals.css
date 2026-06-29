@@ -57,22 +57,23 @@ a {
   background-size: 40px 40px;
 }
 
-/* Header logo: the source file has transparent padding, so force a larger rendered width. */
+/* Header logo: source file has transparent padding, so use width but keep it contained. */
 main > nav img[alt="RockPail"] {
-  width: 18rem !important;
+  width: 15rem !important;
   height: auto !important;
-  max-height: none !important;
+  max-height: 5.8rem !important;
   object-fit: contain !important;
 }
 
 @media (min-width: 640px) {
   main > nav img[alt="RockPail"] {
-    width: 25rem !important;
+    width: 20rem !important;
+    max-height: 6.8rem !important;
   }
 }
 
-/* Force the primary hero CTA to the brand colour combo. */
-main a[href="#how"] {
+/* Force only the hero primary CTA to the brand colour combo. Do not touch the nav link. */
+section#top a[href="#how"] {
   color: #f4ea00 !important;
   background-color: #23005f !important;
 }
