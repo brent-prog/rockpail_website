@@ -57,6 +57,21 @@ a {
   background-size: 40px 40px;
 }
 
+/* The uploaded logo has extra transparent vertical space. This keeps it readable in the fixed header without clipping. */
+main > nav img[alt="RockPail"] {
+  width: 13rem !important;
+  height: auto !important;
+  max-height: 5.5rem !important;
+  object-fit: contain !important;
+}
+
+@media (min-width: 640px) {
+  main > nav img[alt="RockPail"] {
+    width: 17rem !important;
+    max-height: 6.5rem !important;
+  }
+}
+
 .pail-illustration {
   position: relative;
   width: min(360px, 82vw);
