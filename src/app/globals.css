@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+:root {
+  --rockpail-yellow: #f4ea00;
+  --pail-purple: #23005f;
+  --rock-black: #111111;
+  --sand-white: #f6f4ea;
+  --pail-steel: #b9b9b2;
+  --rim-red: #d6452f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--sand-white);
+  color: var(--rock-black);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--rockpail-yellow);
+  color: var(--pail-purple);
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.brand-card {
+  border: 2px solid rgba(17, 17, 17, 0.08);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 24px 80px rgba(35, 0, 95, 0.12);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(35, 0, 95, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 0, 95, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.pail-illustration {
+  position: relative;
+  width: min(360px, 82vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 35%, transparent 0 19%, var(--pail-purple) 20% 27%, transparent 28%),
+    radial-gradient(circle at 50% 55%, var(--rockpail-yellow) 0 31%, var(--pail-purple) 32% 34%, var(--pail-steel) 35% 66%, #8d8d86 67% 69%, transparent 70%);
+  filter: drop-shadow(0 28px 36px rgba(35, 0, 95, 0.28));
+}
+
+.pail-illustration::before,
+.pail-illustration::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: #595852;
+  box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.45);
+}
+
+.pail-illustration::before {
+  width: 34%;
+  height: 26%;
+  left: 33%;
+  top: 34%;
+  background: var(--sand-white);
+  border: 8px solid var(--pail-purple);
+}
+
+.pail-illustration::after {
+  width: 20%;
+  height: 20%;
+  right: 13%;
+  bottom: 18%;
+  background: #514b3f;
+}
+
+.section-kicker {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  font-weight: 900;
+  color: var(--pail-purple);
+}
