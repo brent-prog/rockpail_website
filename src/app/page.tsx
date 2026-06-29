@@ -95,7 +95,7 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#how"
-                className="rounded-full bg-[var(--pail-purple)] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white shadow-xl shadow-purple-950/20 transition hover:-translate-y-0.5"
+                className="rounded-full bg-[var(--pail-purple)] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[var(--rockpail-yellow)] shadow-xl shadow-purple-950/20 transition hover:-translate-y-0.5"
               >
                 See How It Works
               </a>
