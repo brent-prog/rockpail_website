@@ -115,9 +115,6 @@ export default function Home() {
                 alt="RockPail being played outside on the beach"
                 className="w-full object-contain"
               />
-              <div className="absolute left-4 top-4 rounded-full bg-[var(--rockpail-yellow)] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[var(--pail-purple)] shadow-lg">
-                Beach ready
-              </div>
             </div>
             <div className="px-5 pb-5 pt-5">
               <img
