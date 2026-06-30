@@ -113,7 +113,7 @@ export default function Home() {
               <img
                 src="/Beach%20kids.png?v=20260630"
                 alt="RockPail being played outside on the beach"
-                className="aspect-[4/3] w-full object-cover"
+                className="w-full object-contain"
               />
               <div className="absolute left-4 top-4 rounded-full bg-[var(--rockpail-yellow)] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[var(--pail-purple)] shadow-lg">
                 Beach ready
