@@ -16,8 +16,8 @@ const howToPlay = [
   },
   {
     step: "Play",
-    title: "Throw 3 rocks",
-    copy: "Hit the side, rim, or instant-win hole. Call it loud.",
+    title: "Choose your rocks",
+    copy: "Use your own rocks, then keep them together in the RockPail pouches.",
   },
 ];
 
@@ -27,7 +27,7 @@ const reasons = [
   "Built around the metal-pail DING",
   "Simple rules people understand fast",
   "Game to 21 - win by 2",
-  "Beach, backyard, cottage, park, camping, and tailgate ready",
+  "Official RockPail pails look cooler than whatever else you had lying around",
 ];
 
 const rules = [
@@ -41,9 +41,14 @@ const rules = [
 
 const faqs = [
   {
-    question: "Can I just use my own pails and rocks?",
+    question: "Do rocks come with RockPail?",
     answer:
-      "Sure, but your pail will not have the instant-win hole, and official RockPail rocks are selected for the right throwing feel.",
+      "No. Finding your rocks is part of the game. RockPail includes pouches so you can keep your chosen rocks together and avoid losing them in the sand or grass.",
+  },
+  {
+    question: "Can I just use my own pails?",
+    answer:
+      "Sure, but they will not be official RockPail pails, they will not look nearly as good, and they will not have the RockPail target-hole design.",
   },
   {
     question: "Can I change the distance?",
@@ -90,7 +95,7 @@ export default function Home() {
               Keep Fun Simple
             </h1>
             <p className="mt-6 max-w-2xl text-xl font-semibold leading-8 text-[var(--rock-black)] sm:text-2xl">
-              The simple, portable outdoor throwing game built around rocks, metal pails, and the perfect DING.
+              The simple, portable outdoor throwing game built around your rocks, RockPail pails, and the perfect DING.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -126,7 +131,7 @@ export default function Home() {
                 className="mx-auto w-full max-w-xs"
               />
               <p className="mt-4 max-w-sm text-base font-semibold leading-7">
-                Fill the pails. Place them 7 paces apart. Throw the rocks. Call it loud.
+                Fill the pails. Place them 7 paces apart. Pick your rocks. Throw them loud.
               </p>
             </div>
           </div>
@@ -138,7 +143,7 @@ export default function Home() {
           <div>
             <p className="section-kicker mb-4">What it is</p>
             <h2 className="text-4xl font-black uppercase tracking-[-0.05em] text-[var(--pail-purple)] sm:text-5xl">
-              Rocks. Metal pails. Loud outdoor fun.
+              Your rocks. Our pails. Loud outdoor fun.
             </h2>
           </div>
           <div className="text-xl font-semibold leading-9 text-neutral-800">
@@ -146,7 +151,7 @@ export default function Home() {
               RockPail is an easy outdoor game for beaches, backyards, cottages, parks, tailgates, and camping.
             </p>
             <p className="mt-5">
-              No complicated setup. No fragile boards. No overthinking. Just fill the pails, throw the rocks, and play to 21.
+              Find a few good throwing rocks, keep them together in the pouches, fill the pails, and play to 21.
             </p>
           </div>
         </div>
