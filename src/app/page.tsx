@@ -264,10 +264,10 @@ export default function Home() {
               Contact
             </p>
             <a
-              href="mailto:bpattison1973@gmail.com?subject=RockPail%20Inquiry"
+              href="mailto:info@rockpail.com?subject=RockPail%20Inquiry"
               className="mt-4 block break-words text-2xl font-black tracking-[-0.04em] text-[var(--pail-purple)]"
             >
-              bpattison1973@gmail.com
+              info@rockpail.com
             </a>
             <a href="tel:+15198352374" className="mt-3 text-xl font-black">
               519-835-2374
