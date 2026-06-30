@@ -111,7 +111,7 @@ export default function Home() {
           <div className="brand-card mx-auto w-full max-w-lg overflow-hidden rounded-[2rem] p-3 text-center sm:p-4 lg:mx-0 lg:ml-auto">
             <div className="relative overflow-hidden rounded-[1.5rem] bg-white">
               <img
-                src="/Beach%20kids.png?v=20260630"
+                src="/Beach%20kids.png?v=20260701"
                 alt="RockPail being played outside on the beach"
                 className="w-full object-contain"
               />
