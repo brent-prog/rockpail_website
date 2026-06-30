@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "What are the pouches for?",
     answer:
-      "The pouches help stop your rocks from disappearing in the sand or grass. They are thin enough to preserve the authentic rock-on-pail **DING**.",
+      "The pouches help stop your rocks from disappearing in the sand or grass. They are thin enough to preserve the authentic rock-on-pail **DING!**",
   },
   {
     question: "Can I change the distance?",
@@ -70,6 +70,21 @@ const faqs = [
     answer: "Only if you heard it. No DING, no point.",
   },
 ];
+
+function renderAnswer(answer: string) {
+  if (!answer.includes("**DING!**")) {
+    return answer;
+  }
+
+  const [before, after] = answer.split("**DING!**");
+  return (
+    <>
+      {before}
+      <strong>DING!</strong>
+      {after}
+    </>
+  );
+}
 
 export default function Home() {
   return (
@@ -242,12 +257,7 @@ export default function Home() {
                   {faq.question}
                 </h3>
                 <p className="mt-3 text-base font-medium leading-7 text-neutral-700">
-                  {faq.answer.split("**DING**").map((part, index) => (
-                    <span key={index}>
-                      {part}
-                      {index === 0 && <strong>DING</strong>}
-                    </span>
-                  ))}
+                  {renderAnswer(faq.answer)}
                 </p>
               </article>
             ))}
