@@ -41,9 +41,19 @@ const rules = [
 
 const faqs = [
   {
-    question: "Can I just use my own pails and rocks?",
+    question: "Can I use my own pails?",
     answer:
-      "Sure, but your pails will not be official RockPail pails, and that matters. RockPail does not ship rocks - you pick your own. The pouches are there so you do not lose a rock in the sand or grass, and they are thin enough to preserve the authentic rock-on-pail **DING**.",
+      "Sure, but then you are missing the instant-win hole and the original RockPail look. The pails are the game board - and official RockPail pails are built to make the game feel like RockPail.",
+  },
+  {
+    question: "Do rocks come with RockPail?",
+    answer:
+      "No. That is intentional. You get to choose the rocks that feel right to you - the right weight, the right grip, the right throw.",
+  },
+  {
+    question: "What are the pouches for?",
+    answer:
+      "The pouches help stop your rocks from disappearing in the sand or grass. They are thin enough to preserve the authentic rock-on-pail **DING**.",
   },
   {
     question: "Can I change the distance?",
