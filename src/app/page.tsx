@@ -6,8 +6,8 @@ const howToPlay = [
   },
   {
     step: "Place",
-    title: "Soft ground or sand",
-    copy: "Beach, grass, cottage, park, campsite, or tailgate setup.",
+    title: "Play almost anywhere",
+    copy: "Beach, grass, cottage, park, campsite, tailgate, basement, garage, or wherever it makes sense to throw safely.",
   },
   {
     step: "Pace",
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "Do I have to play on the beach?",
     answer:
-      "Nope. Grass, sand, cottages, parks, campsites, and tailgates all work. Avoid hard surfaces because rocks bounce.",
+      "Nope. Beach, grass, backyard, cottage, park, campsite, tailgate, garage, basement - play wherever you have enough room and can throw safely.",
   },
   {
     question: "Do side hits count?",
