@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "Can I just use my own pails and rocks?",
     answer:
-      "Sure, but your pails will not be official RockPail pails, and that matters. RockPail does not ship rocks - you pick your own and use the pouches to keep them together so they do not disappear in the sand or grass.",
+      "Sure, but your pails will not be official RockPail pails, and that matters. RockPail does not ship rocks - you pick your own. The pouches are there so you do not lose a rock in the sand or grass, and they are thin enough to preserve the authentic rock-on-pail **DING**.",
   },
   {
     question: "Can I change the distance?",
@@ -231,7 +231,14 @@ export default function Home() {
                 <h3 className="text-xl font-black tracking-[-0.03em] text-[var(--pail-purple)]">
                   {faq.question}
                 </h3>
-                <p className="mt-3 text-base font-medium leading-7 text-neutral-700">{faq.answer}</p>
+                <p className="mt-3 text-base font-medium leading-7 text-neutral-700">
+                  {faq.answer.split("**DING**").map((part, index) => (
+                    <span key={index}>
+                      {part}
+                      {index === 0 && <strong>DING</strong>}
+                    </span>
+                  ))}
+                </p>
               </article>
             ))}
           </div>
