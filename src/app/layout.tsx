@@ -58,8 +58,12 @@ export default function RootLayout({
         {children}
         <footer className="bg-[var(--rock-black)] text-white">
           <div className="container flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
-            <a href="https://keepfunsimple.com" className="text-xl font-black uppercase tracking-[-0.03em]">
-              KeepFunSimple
+            <a href="https://keepfunsimple.com" aria-label="Visit KeepFunSimple.com">
+              <img
+                src="https://keepfunsimple.com/brand/keepfunsimple-logo-transparent.svg"
+                alt="KeepFunSimple"
+                className="h-14 w-auto max-w-[240px] object-contain"
+              />
             </a>
             <a
               href="https://keepfunsimple.com/shop/rockpail"
