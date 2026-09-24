@@ -54,7 +54,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className="bg-[var(--rock-black)] text-white">
+          <div className="container flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+            <a href="https://keepfunsimple.com" className="text-xl font-black uppercase tracking-[-0.03em]">
+              KeepFunSimple
+            </a>
+            <a
+              href="https://keepfunsimple.com/shop/rockpail"
+              className="rounded-full bg-[var(--rockpail-yellow)] px-6 py-3 text-center text-sm font-black uppercase tracking-[0.14em] text-[var(--pail-purple)]"
+            >
+              Shop KeepFunSimple for RockPail Merch
+            </a>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
