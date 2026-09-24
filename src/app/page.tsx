@@ -57,6 +57,29 @@ const ruleGroups = [
   },
 ];
 
+const scoring = [
+  {
+    name: "Side",
+    points: "1 point",
+    copy: "Rock hits the side of the pail.",
+  },
+  {
+    name: 'Rim / "Rimmer"',
+    points: "2 points",
+    copy: "Rock hits the rim of the pail.",
+  },
+  {
+    name: "RockPail",
+    points: "3 points",
+    copy: "Rock lands in the pail.",
+  },
+  {
+    name: "Winner's Circle",
+    points: "Instant win",
+    copy: "Rock goes through the hole.",
+  },
+];
+
 const cultureRules = [
   {
     title: "Be loud.",
@@ -267,6 +290,39 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="section-kicker mb-3">Scoring</p>
+                <h3 className="text-3xl font-black uppercase tracking-[-0.05em] text-[var(--pail-purple)] sm:text-5xl">
+                  Listen for the DING.
+                </h3>
+              </div>
+              <p className="max-w-xl text-base font-semibold leading-7 text-neutral-700">
+                Score the throw by where the rock hits or lands.
+              </p>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {scoring.map((score) => (
+                <article
+                  key={score.name}
+                  className="overflow-hidden rounded-[1.5rem] border-2 border-[var(--pail-purple)]/10 bg-white shadow-sm"
+                >
+                  <div className="bg-[var(--pail-purple)] px-5 py-5 text-[var(--rockpail-yellow)]">
+                    <p className="text-3xl font-black uppercase tracking-[-0.04em]">{score.points}</p>
+                  </div>
+                  <div className="p-5">
+                    <h4 className="text-xl font-black uppercase tracking-[-0.03em] text-[var(--pail-purple)]">
+                      {score.name}
+                    </h4>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-neutral-700">{score.copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
 
           <div className="mt-8 rounded-[2rem] bg-[var(--pail-purple)] p-7 text-white sm:p-9">
