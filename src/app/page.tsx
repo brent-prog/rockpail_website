@@ -30,61 +30,80 @@ const reasons = [
   "Beach, backyard, cottage, park, camping, and tailgate ready",
 ];
 
-const rules = [
-  "3 rocks per turn",
-  "No ground hits - dead rock",
-  "Underhand or overhand allowed",
-  "1v1 and 2v2 cancel out points",
-  "3-player games count all points",
-  "If you did not hear the side hit, it does not count",
+const ruleGroups = [
+  {
+    label: "Setup",
+    items: [
+      "Fill - water or sand",
+      "Place - play on soft ground or sand",
+      "Pace - 7 paces / 21 feet",
+    ],
+  },
+  {
+    label: "Throwing",
+    items: [
+      "3 rocks - first player throws all 3",
+      "No ground hits - dead rock",
+      "Choice - underhand or overhand",
+    ],
+  },
+  {
+    label: "Gameplay",
+    items: [
+      "1v1 or 2v2 - cancel out points; only the higher score counts",
+      "3 players - all points score",
+      "Game to 21 - win by 2",
+    ],
+  },
+];
+
+const cultureRules = [
+  {
+    title: "Be loud.",
+    copy: "Call out the scoring. The DING is part of the game.",
+  },
+  {
+    title: "Have fun.",
+    copy: "Beverages OK. Keep the game simple and social.",
+  },
+  {
+    title: "Be nice.",
+    copy: "No arguing over dead rocks, rims, or close calls.",
+  },
 ];
 
 const faqs = [
   {
-    question: "Can I use my own pails?",
+    question: "Why can’t I just use my own pails and rocks?",
     answer:
-      "Sure, but then you are missing the instant-win hole and the original RockPail look. The pails are the game board - and official RockPail pails are built to make the game feel like RockPail.",
+      "Sure you can - but your pail will be missing the instant-win hole, and official RockPail rocks are selected to be the right size for throwing.",
   },
   {
-    question: "Do rocks come with RockPail?",
+    question: "What if it looks like a side hit but we’re not 100% sure?",
     answer:
-      "No. That is intentional. You get to choose the rocks that feel right to you - the right weight, the right grip, the right throw.",
-  },
-  {
-    question: "What are the pouches for?",
-    answer:
-      "The pouches help stop your rocks from disappearing in the sand or grass. They are thin enough to preserve the authentic rock-on-pail **DING!**",
+      "If you didn’t actually hear the hit on the side of the pail, it doesn’t count. No DING, no point.",
   },
   {
     question: "Can I change the distance?",
     answer:
-      "Yes. Regulation is 7 paces / 21 feet, but the main rule is that everyone plays the same distance.",
+      "Yes. Regulation is 7 paces / 21 feet, but if another distance works better for your group, use it. Everyone should throw from the same distance and stay behind the pail.",
+  },
+  {
+    question: "Is yelling after each throw required?",
+    answer:
+      "No need to yell for a miss. For a pail, rim, or RockPail? Call it loud. That’s part of the fun.",
   },
   {
     question: "Do I have to play on the beach?",
     answer:
-      "Nope. Beach, grass, backyard, cottage, park, campsite, tailgate, garage, basement - play wherever you have enough room and can throw safely.",
+      "Nope. RockPail works on soft outdoor surfaces. If you don’t have sand, fill the pails with water. Avoid hard surfaces - rocks bounce.",
   },
   {
-    question: "Do side hits count?",
-    answer: "Only if you heard it. No DING, no point.",
+    question: "What if I lose my rocks?",
+    answer:
+      "Replacement official RockPail rocks are available. If you pick your own, keep all 3 similar in size and shape.",
   },
 ];
-
-function renderAnswer(answer: string) {
-  if (!answer.includes("**DING!**")) {
-    return answer;
-  }
-
-  const [before, after] = answer.split("**DING!**");
-  return (
-    <>
-      {before}
-      <strong>DING!</strong>
-      {after}
-    </>
-  );
-}
 
 export default function Home() {
   return (
@@ -222,22 +241,66 @@ export default function Home() {
       </section>
 
       <section id="rules" className="bg-[var(--sand-white)] py-20 scroll-mt-28">
-        <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="section-kicker mb-4">Rules preview</p>
+        <div className="container">
+          <div className="max-w-4xl">
+            <p className="section-kicker mb-4">Full rules</p>
             <h2 className="text-4xl font-black uppercase tracking-[-0.05em] text-[var(--pail-purple)] sm:text-6xl">
               Game to 21. Win by 2.
             </h2>
-            <p className="mt-5 text-xl font-semibold leading-8">
-              Keep the rules clear, loud, and argument-free. If you did not hear the side hit, it does not count.
+            <p className="mt-5 max-w-3xl text-xl font-semibold leading-8 text-neutral-800">
+              Fill the pails. Pace it out. Throw 3 rocks. Call the score loud. RockPail is supposed to be simple.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {rules.map((rule) => (
-              <div key={rule} className="rounded-2xl bg-white p-5 text-lg font-black shadow-sm">
-                {rule}
-              </div>
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {ruleGroups.map((group) => (
+              <article key={group.label} className="rounded-[1.75rem] bg-white p-7 shadow-sm">
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-[var(--pail-purple)]">
+                  {group.label}
+                </p>
+                <div className="mt-5 space-y-3">
+                  {group.items.map((item) => (
+                    <div key={item} className="rounded-2xl bg-[var(--sand-white)] px-5 py-4 text-base font-black leading-6">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </article>
             ))}
+          </div>
+
+          <div className="mt-8 rounded-[2rem] bg-[var(--pail-purple)] p-7 text-white sm:p-9">
+            <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-[var(--rockpail-yellow)]">
+                  The side-hit rule
+                </p>
+                <h3 className="mt-3 text-4xl font-black uppercase tracking-[-0.05em] sm:text-5xl">
+                  No DING. No point.
+                </h3>
+              </div>
+              <p className="text-lg font-semibold leading-8 text-white/90">
+                If a rock looks like it might have clipped the side but nobody actually heard the hit on the metal pail, it does not count.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {cultureRules.map((rule) => (
+              <article key={rule.title} className="rounded-[1.5rem] border-2 border-[var(--pail-purple)]/10 bg-[var(--rockpail-yellow)] p-6">
+                <h3 className="text-2xl font-black uppercase tracking-[-0.04em] text-[var(--pail-purple)]">
+                  {rule.title}
+                </h3>
+                <p className="mt-3 text-base font-semibold leading-7 text-neutral-800">{rule.copy}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-[1.75rem] border-2 border-[var(--rim-red)]/20 bg-white p-7">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[var(--rim-red)]">Play smart</p>
+            <p className="mt-3 text-lg font-semibold leading-8 text-neutral-800">
+              Play on soft ground or sand. Keep players and spectators clear of the throwing lane. Do not throw when someone is near the pail. Rocks bounce - use common sense.
+            </p>
           </div>
         </div>
       </section>
@@ -257,7 +320,7 @@ export default function Home() {
                   {faq.question}
                 </h3>
                 <p className="mt-3 text-base font-medium leading-7 text-neutral-700">
-                  {renderAnswer(faq.answer)}
+                  {faq.answer}
                 </p>
               </article>
             ))}
