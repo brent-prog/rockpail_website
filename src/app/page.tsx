@@ -16,8 +16,8 @@ const howToPlay = [
   },
   {
     step: "Play",
-    title: "Throw 3 rocks",
-    copy: "Hit the side, rim, or instant-win hole. Call it loud.",
+    title: "Get it in the pail",
+    copy: "Throw 3 rocks. Get one in the pail for 3 points. Side and rim hits score too - and the Winner's Circle is an instant win.",
   },
 ];
 
