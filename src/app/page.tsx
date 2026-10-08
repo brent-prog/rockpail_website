@@ -21,15 +21,6 @@ const howToPlay = [
   },
 ];
 
-const reasons = [
-  "No assembly required",
-  "Portable outdoor setup",
-  "Built around the metal-pail DING",
-  "Simple rules people understand fast",
-  "Game to 21 - win by 2",
-  "Beach, backyard, cottage, park, camping, and tailgate ready",
-];
-
 const ruleGroups = [
   {
     label: "Setup",
@@ -233,31 +224,6 @@ export default function Home() {
                 <h3 className="mt-4 text-2xl font-black tracking-[-0.04em]">{item.title}</h3>
                 <p className="mt-3 text-base font-medium leading-7 text-neutral-700">{item.copy}</p>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--pail-purple)] py-20 text-white">
-        <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div>
-            <img
-              src="/Yellow_logo.png"
-              alt="RockPail"
-              className="mb-8 h-auto w-52"
-            />
-            <p className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-[var(--rockpail-yellow)]">
-              Why it works
-            </p>
-            <h2 className="text-4xl font-black uppercase tracking-[-0.05em] sm:text-6xl">
-              The DING is the whole point.
-            </h2>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {reasons.map((reason) => (
-              <div key={reason} className="rounded-2xl bg-white/10 p-5 text-lg font-black">
-                {reason}
-              </div>
             ))}
           </div>
         </div>
